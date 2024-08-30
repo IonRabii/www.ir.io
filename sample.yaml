@@ -1,7 +1,7 @@
 # sample.yaml
-get:
-  summary: Retrieve a sample
-  operationId: getSample
+post:
+  summary: Retrieve a remote sample
+  operationId: getSample-remote
   responses:
     '200':
       description: A successful response
