@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://example.com/schema"
+            xmlns="http://example.com/schema"
+            elementFormDefault="qualified">
+
+    <!-- Define the GetCustomerResponse element -->
+    <xsd:element name="GetCustomerResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="customerName" type="xsd:string"/>
+                <xsd:element name="customerEmail" type="xsd:string"/>
+                <xsd:element name="department" type="DepartmentType"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Define the DepartmentType complex type -->
+    <xsd:complexType name="DepartmentType">
+        <xsd:sequence>
+            <xsd:element name="department" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="PositiveInteger">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>
